@@ -1,3 +1,10 @@
+
+
+import streamlit as st
+import numpy as np
+from sklearn.svm import SVC
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import Pipeline
 st.markdown("""
 <style>
 
@@ -83,13 +90,6 @@ hr {
 
 </style>
 """, unsafe_allow_html=True)
-
-import streamlit as st
-import numpy as np
-from sklearn.svm import SVC
-from sklearn.preprocessing import StandardScaler
-from sklearn.pipeline import Pipeline
-
 # -------------------------------
 # App Title & Description
 # -------------------------------
