@@ -1,3 +1,89 @@
+st.markdown("""
+<style>
+
+/* Overall app background */
+.stApp {
+    background: linear-gradient(135deg, #f0f4ff, #ffffff);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Main title */
+h1 {
+    color: #1f3c88;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Subheaders */
+h2, h3 {
+    color: #27496d;
+}
+
+/* Sidebar styling */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #1f3c88, #27496d);
+    color: white;
+}
+
+section[data-testid="stSidebar"] label {
+    color: white !important;
+    font-weight: 600;
+}
+
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3 {
+    color: #ffffff;
+}
+
+/* Buttons */
+.stButton > button {
+    background: linear-gradient(90deg, #1f3c88, #4066d4);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.stButton > button:hover {
+    background: linear-gradient(90deg, #4066d4, #1f3c88);
+    transform: scale(1.03);
+}
+
+/* Success & Error messages */
+div[data-testid="stAlert"] {
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+/* Info / explanation box */
+.stInfo, .stWarning {
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 15px;
+}
+
+/* Radio buttons */
+div[role="radiogroup"] label {
+    font-weight: 600;
+}
+
+/* Input fields */
+input, select {
+    border-radius: 8px !important;
+}
+
+/* Divider spacing */
+hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
 import streamlit as st
 import numpy as np
 from sklearn.svm import SVC
@@ -145,3 +231,4 @@ if st.button("✅ Check Loan Eligibility"):
             "the model predicts a **higher risk of loan default**, "
             "so the loan is unlikely to be approved."
         )
+
